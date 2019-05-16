@@ -39,8 +39,8 @@ export default class About extends Component {
       findByCode(value)
         .then(diagnosis => this.setState({ diagnosis, loading: false }))
         .catch(ex => {
-          const { statusCode, message } = ex.response.data;
-          const errorMessage = `${statusCode} - ${message}`;
+          const { statusCode, error } = ex.response.data;
+          const errorMessage = `${statusCode} - ${error}`;
           message.error(errorMessage);
           this.setState({ loading: false });
         });

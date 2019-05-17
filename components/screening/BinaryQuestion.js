@@ -1,6 +1,4 @@
-import { Row, Col, Typography, Checkbox, List } from 'antd';
-
-const { Title, Paragraph } = Typography;
+import { Checkbox, List } from 'antd';
 
 export default function BinaryQuestion(props) {
   const { title, subtitle, checked, onClick } = props;
